@@ -9,9 +9,10 @@ class Arquivo
 {
 private:
     string nomeArquivo;
+    fstream arquivo;
 
 public:
-    Arquivo();
-    void escreverArquivo();
+    void escreverArquivo(vector<vector<int>> &matriz, int linhas, int colunas, int fogoX, int fogoY);
     void lerMatriz(vector<vector<int>> &matriz, int linhas, int colunas, int fogoX, int fogoY);
+    void exibirMatriz(const std::vector<std::vector<int>> &matriz);
 };
