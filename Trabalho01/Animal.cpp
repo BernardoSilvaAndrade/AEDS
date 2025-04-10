@@ -2,6 +2,21 @@
 
 Animal::Animal() : x(-1), y(-1) {}
 
+int Animal::getX() const
+{
+    return x;
+}
+
+int Animal::getY() const
+{
+    return y;
+}
+
+pair<int, int> Animal::getPosicao() const
+{
+    return {x, y};
+}
+
 pair<int, int> Animal::encontrarZero(const vector<vector<int>> &matriz)
 {
     for (int i = 0; i < matriz.size(); i++)
@@ -12,7 +27,9 @@ pair<int, int> Animal::encontrarZero(const vector<vector<int>> &matriz)
             {
                 x = i;
                 y = j;
-                return {i, j};
+                caminho.clear();
+                registrarPasso();
+                return {x, y};
             }
         }
     }
@@ -21,28 +38,74 @@ pair<int, int> Animal::encontrarZero(const vector<vector<int>> &matriz)
 
 void Animal::mover(vector<vector<int>> &matriz)
 {
-    vector<pair<int, int>> direcoes = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+    pair<int, int> movimentos[] = {
+        {1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-    int melhorX = x, melhorY = y;
+    int prioridades[] = {4, 0, 1, 3};
 
     for (int i = 0; i < 4; i++)
     {
-        int novoX = x + direcoes[i].first;
-        int novoY = y + direcoes[i].second;
+        int prioridade = prioridades[i];
 
-        if (novoX >= 0 && novoX < matriz.size() && novoY >= 0 && novoY < matriz[0].size())
+        for (int j = 0; j < 4; j++)
         {
-            if (matriz[novoX][novoY] == 4)
+            int novoX = x + movimentos[j].first;
+            int novoY = y + movimentos[j].second;
+
+            if (novoX >= 0 && novoX < matriz.size() &&
+                novoY >= 0 && novoY < matriz[0].size())
             {
-                melhorX = novoX;
-                melhorY = novoY;
-                break;
+
+                int valor = matriz[novoX][novoY];
+
+                if (valor != 2 && valor == prioridade)
+                {
+                    if (matriz[x][y] != 0)
+                    {
+                        matriz[x][y] = 1;
+                    }
+                    x = novoX;
+                    y = novoY;
+
+                    if (prioridade == 4)
+                    {
+                        matriz[x][y] = 0;
+
+                        for (int k = 0; k < 4; k++)
+                        {
+                            int adjX = x + movimentos[k].first;
+                            int adjY = y + movimentos[k].second;
+
+                            if (adjX >= 0 && adjX < matriz.size() &&
+                                adjY >= 0 && adjY < matriz[0].size() &&
+                                matriz[adjX][adjY] != 2)
+                            {
+                                matriz[adjX][adjY] = 1;
+                            }
+                        }
+                    }
+                    return;
+                }
             }
         }
     }
+}
 
-    matriz[x][y] = 1;
-    matriz[melhorX][melhorY] = 2;
-    x = melhorX;
-    y = melhorY;
+void Animal::registrarPasso()
+{
+    caminho.push_back({x, y});
+}
+
+void Animal::mostrarCaminho() const
+{
+    cout << "Caminho percorrido pelo animal:\n";
+    for (const auto &passo : caminho)
+    {
+        cout << "(" << passo.first << ", " << passo.second << ")\n";
+    }
+}
+
+int Animal::contarPassos() const
+{
+    return caminho.size();
 }

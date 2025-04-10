@@ -1,20 +1,19 @@
 #pragma once
-#include <iostream>
-#include <fstream>
-#include <vector>
-
-using namespace std;
 
 class Config
 {
 private:
-    static int tics;
-    static int ventania;
+    int ticsTotais;
+    bool ventania;
+    int contadorCasaZero;
 
 public:
-    static int getTics();
-    static int getVentania();
-    static void setTics(int tics);
-    static void setVentania(int ventania);
-    static void carregarPadrao();
+    Config(int tics, bool vento);
+
+    int getTicsTotais();
+    bool temVentania();
+
+    void resetarContador();
+    void incrementarContador();
+    bool precisaMoverDaCasaZero();
 };
