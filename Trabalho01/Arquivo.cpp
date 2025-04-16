@@ -1,27 +1,77 @@
 #include "Arquivo.hpp"
 
-void Arquivo::escreverArquivo(vector<vector<int>> &matriz, int linhas, int colunas, int fogoX, int fogoY)
+void Arquivo::escreverArquivo(const vector<vector<int>> &matriz, const vector<vector<vector<int>>> &iteracoes, const Animal &animal, bool sobreviveu)
 {
-    arquivo >> linhas >> colunas >> fogoX >> fogoY;
-    matriz.resize(linhas, vector<int>(colunas));
+    std::ofstream arquivo("output.dat");
 
-    for (int i = 0; i < linhas; i++)
+    if (!arquivo.is_open())
     {
-        for (int j = 0; j < colunas; j++)
+        std::cerr << "Erro ao abrir o arquivo de saída.\n";
+        return;
+    }
+
+    arquivo << "Matriz Inicial:\n";
+    for (const auto &linha : matriz)
+    {
+        for (int valor : linha)
         {
-            arquivo << matriz[i][j];
+            arquivo << valor << " ";
         }
+        arquivo << "\n";
+    }
+    arquivo << "\n";
+
+       for (size_t i = 0; i < iteracoes.size(); i++)
+    {
+        arquivo << "Iteracao " << i + 1 << ":\n";
+        for (const auto &linha : iteracoes[i])
+        {
+            for (int valor : linha)
+            {
+                arquivo << valor << " ";
+            }
+            arquivo << "\n";
+        }
+        arquivo << "\n";
+    }
+
+    arquivo << "Estado final da matriz:\n";
+    for (const auto &linha : matriz)
+    {
+        for (int valor : linha)
+        {
+            arquivo << valor << " ";
+        }
+        arquivo << "\n";
+    }
+
+    arquivo << "\nCaminho percorrido pelo animal:\n";
+    const auto &caminho = animal.getCaminho();
+    for (const auto &passo : caminho)
+    {
+        arquivo << "(" << passo.first << ", " << passo.second << ")\n";
+    }
+
+    arquivo << "\nTotal de passos: " << caminho.size() << "\n";
+
+    if (sobreviveu)
+    {
+        arquivo << "Condição final: Animal sobreviveu até o fim da simulação.\n";
+    }
+    else
+    {
+        arquivo << "Condição final: Animal foi atingido pelo fogo.\n";
     }
 
     arquivo.close();
 }
-void lerMatriz(vector<vector<int>> &matriz, int linhas, int colunas, int fogoX, int fogoY)
+void Arquivo::lerMatriz(vector<vector<int>> &matriz, int &linhas, int &colunas, int &fogoX, int &fogoY)
 {
     ifstream arquivo("input.dat");
 
     if (!arquivo)
     {
-        cerr << "Erro ao abrir o arquivo!\n";
+        cerr << "Erro ao abrir o arquivo!" << endl;
         return;
     }
 
@@ -38,16 +88,4 @@ void lerMatriz(vector<vector<int>> &matriz, int linhas, int colunas, int fogoX, 
     }
 
     arquivo.close();
-}
-
-void Arquivo::exibirMatriz(const std::vector<std::vector<int>> &matriz)
-{
-    for (const auto &linha : matriz)
-    {
-        for (int valor : linha)
-        {
-            std::cout << valor << " ";
-        }
-        std::cout << "\n";
-    }
 }

@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
+#include "Animal.hpp"
 
 using namespace std;
 
@@ -12,7 +14,6 @@ private:
     fstream arquivo;
 
 public:
-    void escreverArquivo(vector<vector<int>> &matriz, int linhas, int colunas, int fogoX, int fogoY);
-    void lerMatriz(vector<vector<int>> &matriz, int linhas, int colunas, int fogoX, int fogoY);
-    void exibirMatriz(const std::vector<std::vector<int>> &matriz);
+    void escreverArquivo(const vector<vector<int>> &matriz, const vector<vector<vector<int>>> &iteracoes, const Animal &animal, bool sobreviveu);
+    static void lerMatriz(vector<vector<int>> &matriz, int &linhas, int &colunas, int &fogoX, int &fogoY);
 };

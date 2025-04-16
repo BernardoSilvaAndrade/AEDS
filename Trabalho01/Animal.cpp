@@ -12,6 +12,17 @@ int Animal::getY() const
     return y;
 }
 
+const vector<pair<int, int>> &Animal::getCaminho() const
+{
+    return caminho;
+}
+
+void Animal::setPosicao(int linha, int coluna)
+{
+    x = linha;
+    y = coluna;
+}
+
 pair<int, int> Animal::getPosicao() const
 {
     return {x, y};
@@ -94,6 +105,7 @@ void Animal::mover(vector<vector<int>> &matriz)
 void Animal::registrarPasso()
 {
     caminho.push_back({x, y});
+    std::cout << "Registrando passo em: (" << x << ", " << y << ")\n";
 }
 
 void Animal::mostrarCaminho() const

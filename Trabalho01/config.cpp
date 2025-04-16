@@ -5,6 +5,11 @@ Config::Config(int tics, bool vento)
     ticsTotais = tics;
     ventania = vento;
     contadorCasaZero = 0;
+
+    ventoCima = false;
+    ventoBaixo = false;
+    ventoEsquerda = false;
+    ventoDireita = false;
 }
 
 int Config::getTicsTotais()
@@ -30,4 +35,29 @@ void Config::incrementarContador()
 bool Config::precisaMoverDaCasaZero()
 {
     return contadorCasaZero >= 3;
+}
+
+void Config::configurarVento(bool cima, bool baixo, bool esquerda, bool direita)
+{
+    ventoCima = cima;
+    ventoBaixo = baixo;
+    ventoEsquerda = esquerda;
+    ventoDireita = direita;
+}
+
+bool Config::ventoSopraCima() const
+{
+    return ventoCima;
+}
+bool Config::ventoSopraBaixo() const
+{
+    return ventoBaixo;
+}
+bool Config::ventoSopraEsquerda() const
+{
+    return ventoEsquerda;
+}
+bool Config::ventoSopraDireita() const
+{
+    return ventoDireita;
 }

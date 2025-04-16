@@ -15,8 +15,9 @@ public:
     Animal();
 
     pair<int, int> getPosicao() const;
+    const vector<pair<int, int>> &getCaminho() const;
 
-    void setDirecao(int novoX, int novoY);
+    void setPosicao(int linha, int coluna);
     int getX() const;
     int getY() const;
 
