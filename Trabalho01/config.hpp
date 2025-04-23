@@ -17,6 +17,7 @@ public:
 
     int getTicsTotais();
     bool temVentania();
+    int getContador() const;
 
     void resetarContador();
     void incrementarContador();

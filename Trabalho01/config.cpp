@@ -37,6 +37,11 @@ bool Config::precisaMoverDaCasaZero()
     return contadorCasaZero >= 3;
 }
 
+int Config::getContador() const
+{
+    return contadorCasaZero;
+}
+
 void Config::configurarVento(bool cima, bool baixo, bool esquerda, bool direita)
 {
     ventoCima = cima;

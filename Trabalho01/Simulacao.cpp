@@ -3,12 +3,14 @@
 
 void Simulacao::executar(std::vector<std::vector<int>> &matriz, Animal &animal, Config &config)
 {
+
+    vector<vector<int>> matrizInicial = matriz;
     Floresta floresta(matriz, config);
     vector<vector<vector<int>>> iteracoes;
 
-    bool sobreviveu = true;
+    bool sobreviveu = !animal.perdeuTodasAsVidas(matriz);
 
-    for (int t = 0; t < config.getTicsTotais(); t++)
+    for (int t = 0; t < config.getTicsTotais() && sobreviveu; t++)
     {
         cout << "\n=== Iteração " << t + 1 << " ===\n";
 
@@ -18,21 +20,46 @@ void Simulacao::executar(std::vector<std::vector<int>> &matriz, Animal &animal, 
         int posX = animal.getX();
         int posY = animal.getY();
 
+        if (animal.deveMorrer(matriz, config.getContador()))
+        {
+            cout << "O animal morreu por estar cercado ou por ficar tempo demais na casa 0.\n";
+            sobreviveu = false;
+            break;
+        }
+
         if (matriz[posX][posY] == 0)
         {
             config.incrementarContador();
 
             if (config.precisaMoverDaCasaZero())
             {
-                animal.mover(matriz);
-                animal.registrarPasso();
-                config.resetarContador();
+                bool seMoveu = animal.mover(matriz);
+                if (seMoveu)
+                {
+                    animal.registrarPasso();
+                    config.resetarContador();
+                }
+                else if (animal.deveMorrer(matriz, config.getContador()))
+                {
+                    cout << "O animal morreu por estar cercado ou por ficar tempo demais na casa 0.\n";
+                    sobreviveu = false;
+                    break;
+                }
             }
         }
         else
         {
-            animal.mover(matriz);
-            animal.registrarPasso();
+            bool seMoveu = animal.mover(matriz);
+            if (seMoveu)
+            {
+                animal.registrarPasso();
+            }
+            else if (animal.deveMorrer(matriz, config.getContador()))
+            {
+                cout << "O animal morreu por estar cercado ou por ficar tempo demais na casa 0.\n";
+                sobreviveu = false;
+                break;
+            }
             config.resetarContador();
         }
 
@@ -41,6 +68,15 @@ void Simulacao::executar(std::vector<std::vector<int>> &matriz, Animal &animal, 
         if (matriz[posX][posY] == 2)
         {
             sobreviveu = false;
+            cout << "Animal foi atingido pelo fogo e morreu!\n";
+            break;
+        }
+
+        if (animal.perdeuTodasAsVidas(matriz))
+        {
+            cout << "Animal perdeu todas as vidas e morreu no fogo!\n";
+            sobreviveu = false;
+            break;
         }
 
         cout << "\nMatriz Após Iteração " << t + 1 << ":\n";
@@ -58,7 +94,7 @@ void Simulacao::executar(std::vector<std::vector<int>> &matriz, Animal &animal, 
     }
 
     Arquivo arquivo;
-    arquivo.escreverArquivo(matriz, iteracoes, animal, sobreviveu);
+    arquivo.escreverArquivo(matrizInicial, matriz, iteracoes, animal, sobreviveu);
 }
 
 void Simulacao::simulacao()
@@ -77,8 +113,9 @@ void Simulacao::simulacao()
         matriz[fogoX][fogoY] = 2;
     }
 
-    Config config(10, true);
+    vector<vector<int>> matrizInicial = matriz;
 
+    Config config(10, true);
     config.configurarVento(true, true, true, true);
 
     Floresta floresta(matriz, config);
@@ -100,6 +137,11 @@ void Simulacao::simulacao()
     cout << "Posição inicial correta: (" << pos.first << ", " << pos.second << ")\n";
 
     Simulacao::executar(matriz, animal, config);
+
+    if (animal.deveMorrer(matriz, config.getContador()))
+    {
+        std::cout << "O animal morreu por estar cercado ou por ficar tempo demais na casa 0.\n";
+    }
 
     animal.mostrarCaminho();
     cout << "Total de passos: " << animal.contarPassos() << endl;

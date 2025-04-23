@@ -47,7 +47,7 @@ pair<int, int> Animal::encontrarZero(const vector<vector<int>> &matriz)
     return {-1, -1};
 }
 
-void Animal::mover(vector<vector<int>> &matriz)
+bool Animal::mover(vector<vector<int>> &matriz)
 {
     pair<int, int> movimentos[] = {
         {1, 0}, {-1, 0}, {0, 1}, {0, -1}};
@@ -95,11 +95,12 @@ void Animal::mover(vector<vector<int>> &matriz)
                             }
                         }
                     }
-                    return;
+                    return true;
                 }
             }
         }
     }
+    return false;
 }
 
 void Animal::registrarPasso()
@@ -120,4 +121,46 @@ void Animal::mostrarCaminho() const
 int Animal::contarPassos() const
 {
     return caminho.size();
+}
+
+bool Animal::perdeuTodasAsVidas(const std::vector<std::vector<int>> &matriz)
+{
+    if (matriz[x][y] == 2)
+    {
+        vidas--;
+        return vidas <= 0;
+    }
+    return false;
+}
+
+bool Animal::deveMorrer(const std::vector<std::vector<int>> &matriz, int contadorCasaZero) const
+{
+
+    if (matriz[x][y] == 0 && contadorCasaZero >= 3)
+    {
+        return true;
+    }
+
+    std::pair<int, int> direcoes[] = {
+        {1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    bool cercado = true;
+
+    for (auto dir : direcoes)
+    {
+        int nx = x + dir.first;
+        int ny = y + dir.second;
+
+        if (nx >= 0 && nx < matriz.size() &&
+            ny >= 0 && ny < matriz[0].size())
+        {
+            if (matriz[nx][ny] != 2)
+            {
+                cercado = false;
+                break;
+            }
+        }
+    }
+
+    return cercado;
 }

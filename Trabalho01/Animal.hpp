@@ -10,6 +10,7 @@ class Animal
 private:
     int x, y;
     std::vector<std::pair<int, int>> caminho;
+    int vidas = 2;
 
 public:
     Animal();
@@ -22,7 +23,9 @@ public:
     int getY() const;
 
     pair<int, int> encontrarZero(const vector<vector<int>> &matriz);
-    void mover(vector<vector<int>> &matriz);
+    bool mover(vector<vector<int>> &matriz);
+    bool perdeuTodasAsVidas(const vector<vector<int>> &matriz);
+    bool deveMorrer(const std::vector<std::vector<int>> &matriz, int contadorCasaZero) const;
 
     void registrarPasso();
     void mostrarCaminho() const;

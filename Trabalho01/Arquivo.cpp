@@ -1,6 +1,6 @@
 #include "Arquivo.hpp"
 
-void Arquivo::escreverArquivo(const vector<vector<int>> &matriz, const vector<vector<vector<int>>> &iteracoes, const Animal &animal, bool sobreviveu)
+void Arquivo::escreverArquivo(const vector<vector<int>> &matrizInicial, const vector<vector<int>> &matrizFinal, const vector<vector<vector<int>>> &iteracoes, const Animal &animal, bool sobreviveu)
 {
     std::ofstream arquivo("output.dat");
 
@@ -11,7 +11,7 @@ void Arquivo::escreverArquivo(const vector<vector<int>> &matriz, const vector<ve
     }
 
     arquivo << "Matriz Inicial:\n";
-    for (const auto &linha : matriz)
+    for (const auto &linha : matrizInicial)
     {
         for (int valor : linha)
         {
@@ -21,7 +21,7 @@ void Arquivo::escreverArquivo(const vector<vector<int>> &matriz, const vector<ve
     }
     arquivo << "\n";
 
-       for (size_t i = 0; i < iteracoes.size(); i++)
+    for (size_t i = 0; i < iteracoes.size(); i++)
     {
         arquivo << "Iteracao " << i + 1 << ":\n";
         for (const auto &linha : iteracoes[i])
@@ -36,7 +36,7 @@ void Arquivo::escreverArquivo(const vector<vector<int>> &matriz, const vector<ve
     }
 
     arquivo << "Estado final da matriz:\n";
-    for (const auto &linha : matriz)
+    for (const auto &linha : matrizFinal)
     {
         for (int valor : linha)
         {
