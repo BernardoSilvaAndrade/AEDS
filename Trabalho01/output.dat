@@ -1,9 +1,9 @@
 Matriz Inicial:
-0 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
+0 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 2 
 
 Iteracao 1:
 0 1 1 1 1 
@@ -47,38 +47,10 @@ Iteracao 6:
 2 3 3 3 3 
 3 3 3 3 3 
 
-Iteracao 7:
+Estado final da matriz:
 0 2 2 3 3 
 2 2 3 3 3 
 2 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-
-Iteracao 8:
-0 2 3 3 3 
-2 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-
-Iteracao 9:
-0 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-
-Iteracao 10:
-0 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
-
-Estado final da matriz:
-0 3 3 3 3 
-3 3 3 3 3 
-3 3 3 3 3 
 3 3 3 3 3 
 3 3 3 3 3 
 
@@ -86,8 +58,6 @@ Caminho percorrido pelo animal:
 (0, 0)
 (1, 0)
 (0, 0)
-(0, 0)
-(1, 0)
 
-Total de passos: 5
-Condição final: Animal sobreviveu até o fim da simulação.
+Total de passos: 3
+Condição final: Animal foi atingido pelo fogo.
