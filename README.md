@@ -26,6 +26,11 @@ Nesse projeto, consiste em uma simulação computacional que modela dois fenôme
    ```bash
    git clone https://github.com/seu-usuario/simulacao-incendio.git
    cd simulacao-incendio
+2. **Compilar o projeto**:
+Dentro da pasta do projeto, execute os seguintes comandos:
+   ```bash
+   make clean   
+   make        
 
 # Autores
 
