@@ -13,11 +13,6 @@ Nesse projeto, consiste em uma simulação computacional que modela dois fenôme
 
 ## Estudos de Casos
 
-## Conclusão
-
-## Referências
-Este projeto usa um Makefile fornecido pelo professor Michel Pires Silva.
-
 ## 👨‍💻 Modo de Compilação e Execução
 ### Pré-requisitos
 - Sistema operacional Linux ou macOS (Windows pode usar WSL)
@@ -62,6 +57,10 @@ O arquivo output.dat sera gerado com:
 | `make test`   | 🧪 Executa testes unitários            |
 
    
+## Conclusão
+
+## Referências
+Este projeto usa um Makefile fornecido pelo professor Michel Pires Silva.
 
 # Autores
 
