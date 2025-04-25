@@ -18,6 +18,5 @@ Nesse projeto, consiste em uma simulação computacional que modela dois fenôme
 # Autores
 
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/177992576?v=4" width=115><br><sub>Bernardo Silva Andrade</sub>](https://github.com/BernardoSilvaAndrade) |
-| :---: | :---: | :---: |
 
 
