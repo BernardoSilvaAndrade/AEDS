@@ -54,14 +54,14 @@ O arquivo output.dat sera gerado com:
 
 | Comando       | Descrição                              |
 |---------------|----------------------------------------|
-| `make clean`  | Remove todos os arquivos compilados    |
-| `make debug`  | Compila em modo depuração              |
-| `make test`   | Executa testes unitários (se houver)   |
+| `make clean`  | 🗑️ Remove arquivos compilados         |
+| `make debug`  | 🐛 Compila em modo depuração           |
+| `make test`   | 🧪 Executa testes unitários            |
 
    
 
 # Autores
 
-  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/177992576?v=4" width=115><br><sub>Bernardo Silva Andrade</sub>](https://github.com/BernardoSilvaAndrade) 
+[<img loading="lazy" src="https://avatars.githubusercontent.com/u/177992576?v=4" width=115><br><sub>Bernardo Silva Andrade</sub>](https://github.com/BernardoSilvaAndrade) 
 
 
