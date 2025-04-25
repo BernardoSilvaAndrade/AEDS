@@ -1,6 +1,6 @@
 <h1 align="center"> 🔥🌲 Simulação de Propagação de Incêndio Florestal </h1>
 
-![Image](https://github.com/user-attachments/assets/01bec733-3390-49e3-b680-7266121428ee)
+<h1 align="center"> ![Image](https://github.com/user-attachments/assets/01bec733-3390-49e3-b680-7266121428ee)</h1>
 
 ## ☕ Introdução
 
@@ -41,7 +41,7 @@ Certifique-se que existe um arquivo "input.dat" na pasta raiz
    ```bash
    make run    # Compila (se necessário) e executa
 5. **Verifique os resultados**
-   ```bash
+
 O arquivo output.dat sera gerado com:
    Matriz inicial e final
 
