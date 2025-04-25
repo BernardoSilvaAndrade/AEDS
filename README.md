@@ -14,6 +14,18 @@ Nesse projeto, consiste em uma simulação computacional que modela dois fenôme
 ## Referências
 
 ## 👨‍💻 Modo de Compilação e Execução
+### Pré-requisitos
+- Sistema operacional Linux ou macOS (Windows pode usar WSL)
+- Compilador g++ instalado
+- Git para clonar o repositório
+- Make para automatização
+
+### Passo a Passo
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/simulacao-incendio.git
+   cd simulacao-incendio
 
 # Autores
 
