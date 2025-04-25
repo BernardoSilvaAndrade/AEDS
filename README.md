@@ -41,6 +41,7 @@ Certifique-se que existe um arquivo "input.dat" na pasta raiz
    ```bash
    make run    # Compila (se necessário) e executa
 5. **Verifique os resultados**
+   ```bash
 O arquivo output.dat sera gerado com:
 
    
