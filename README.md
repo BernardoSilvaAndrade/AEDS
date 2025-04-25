@@ -29,8 +29,26 @@ Nesse projeto, consiste em uma simulação computacional que modela dois fenôme
 2. **Compilar o projeto**:
 Dentro da pasta do projeto, execute os seguintes comandos:
    ```bash
-   make clean   
-   make        
+   make clean   # Remove arquivos de compilações anteriores
+   make         # Compila todo o código fonte
+3. **Prepare o arquivo de Entrada**
+Certifique-se que existe um arquivo "input.dat" na pasta raiz
+   Formato esperado:
+   ```bash
+   LINHAS COLUNAS POS_X_FOGO POS_Y_FOGO
+   MATRIZ...
+4. **Executar a Simulação**
+   ```bash
+   make run    # Compila (se necessário) e executa
+5. **Verifique os resultados**
+       O arquivo output.dat será gerado com:
+
+        Matriz inicial e final
+
+        Caminho percorrido pelo animal
+
+        Resultado da simulação
+   
 
 # Autores
 
