@@ -50,6 +50,13 @@ O arquivo output.dat sera gerado com:
    Caminho percorrido pelo animal
 
    Resultado da simulação
+### Comandos Adicionais
+
+| Comando       | Descrição                              |
+|---------------|----------------------------------------|
+| `make clean`  | Remove todos os arquivos compilados    |
+| `make debug`  | Compila em modo depuração              |
+| `make test`   | Executa testes unitários (se houver)   |
 
    
 
