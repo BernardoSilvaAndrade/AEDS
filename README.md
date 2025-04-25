@@ -41,10 +41,8 @@ Certifique-se que existe um arquivo "input.dat" na pasta raiz
    ```bash
    make run    # Compila (se necessário) e executa
 5. **Verifique os resultados**
-   O arquivo output.dat será gerado com:
-   Matriz inicial e final
-   Caminho percorrido pelo animal
-   Resultado da simulação
+O arquivo output.dat sera gerado com:
+
    
 
 # Autores
