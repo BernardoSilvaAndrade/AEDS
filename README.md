@@ -8,6 +8,6 @@ Nesse projeto, consiste em uma simulação computacional que modela dois fenôme
 
 ## 📚 Metodologia
 
-## 👩‍💻 Modo de Compilação e Execução
+## 👨‍💻 Modo de Compilação e Execução
 
 
