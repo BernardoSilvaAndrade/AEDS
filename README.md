@@ -11,9 +11,12 @@ Nesse projeto, consiste em uma simulação computacional que modela dois fenôme
 
 ## 📚 Metodologia
 
-## Estudos de Caso
+## Estudos de Casos
+
+## Conclusão
 
 ## Referências
+Este projeto usa um Makefile fornecido pelo professor Michel Pires Silva.
 
 ## 👨‍💻 Modo de Compilação e Execução
 ### Pré-requisitos
