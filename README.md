@@ -43,6 +43,11 @@ Certifique-se que existe um arquivo "input.dat" na pasta raiz
 5. **Verifique os resultados**
    ```bash
 O arquivo output.dat sera gerado com:
+   Matriz inicial e final
+
+   Caminho percorrido pelo animal
+
+   Resultado da simulação
 
    
 
