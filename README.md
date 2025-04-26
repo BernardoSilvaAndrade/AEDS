@@ -5,6 +5,7 @@
 ## ☕ Introdução
 
 Este trabalho foi proposto pelo professor Michel Pires Silva, da matéria Algoritmos e Estrutura de Dados I, do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET - MG), Campus V - Divinópolis.
+
 Nesse projeto, consiste em uma simulação computacional que modela dois fenômenos interligados, onde temos uma propagação de um incêndio em uma floresta representada por uma matriz bidimensional, além de um comportamento de um animal tentando escapar do fogo enquanto ele se espalha pela matriz.
 
 O trabalho foi desenvolvido em C++ e aborda uma simulação que integra três desafios em um ambiente dinâmico. A simulação modela a propagação do incêndio florestal de forma realista, levando em conta vários fatores. A direção do vento, configurável para atuar em uma ou mais das quatro direções cardeais e impacta diretamente a direção do fogo. O tipo de terreno também influencia a propagação, sendo representado na matriz por diferentes valores: áreas de água (valor 4) que impedem o fogo de se espalhar, árvores saudáveis (valor 1) que queimam facilmente, árvores em chamas (valor 2) que ajudam a propagar o fogo, e árvores queimadas (valor 3) que não propagam mais o incêndio. Além disso, o tempo de queima das árvores é determinado pelo número de iterações que uma árvore permanece em chamas antes de se tornar cinza.
@@ -16,6 +17,28 @@ Por fim, o sistema gerencia diferentes estados ao longo do tempo, controlando a 
 
 
 ## 📚 Metodologia
+
+### 1. Arquitetura do Sistema
+O sistema é composto por quatro módulos interconectados:
+- **Floresta**: Gerencia a matriz e a propagação do fogo
+- **Animal**: Controla a lógica de movimento e sobrevivência
+- **Config**: Armazena parâmetros globais
+- **Arquivo**: Manipula entrada/saída de dados
+
+---
+
+### 2. Detalhamento das Funcionalidades
+
+#### 2.1 Propagação do Incêndio
+**Mecanismo**:
+1. Para cada célula em chamas (`2`):
+   - Incrementa contador interno `ticsEmChamas`
+   - Se `ticsEmChamas >= ticsParaQueimar` (Config):
+     - Marca como queimada (`3`)
+     - Reseta contador
+   - Senão, propaga fogo para adjacentes:
+     - Verifica direções habilitadas pelo vento (Config)
+     - Só afeta células válidas (`1` = árvore saudável)
 
 ## Estudos de Casos
 
