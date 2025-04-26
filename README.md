@@ -110,14 +110,16 @@ Aqui estão dois exemplos de simulação:
 
 Neste exemplo, a simulação mostra um cenário onde o incêndio se espalha rapidamente e o animal não consegue escapar a tempo. A matriz é atualizada a cada iteração, e o animal acaba morrendo.
 
-#### Matriz Inicial (Antes da Simulação): 
+#### Exemplo 01: 
      ```
-     5 5 5 5  
-     0 1 1 1 1  
-     1 4 1 0 1 
-     1 1 1 4 1  
-     1 1 1 1 1  
-     0 1 1 1 2  
+     Matriz inicial:    Iteraçao 01:     Iteracao 02:    Iteracao 03:
+     5 5 5 5            5 5 5 5          5 5 5 5         5 5 5 5 
+     0 1 1 1 1          0 1 1 1 1        0 1 1 1 1       0 1 1 1 1 
+     1 4 1 1 1          1 4 1 1 1        1 4 1 1 1       1 4 1 1 2
+     1 1 1 4 1          1 1 1 4 1        1 1 1 4 2       1 1 1 4 2
+     1 1 1 1 1          1 1 1 1 2        1 1 1 2 2       1 1 2 2 3
+     0 1 1 1 2          0 1 1 2 2        0 1 2 2 3       0 2 2 3 3
+     Animal: (0, 0)     Animal: (0, 0)   Animal: (0, 0)  Animal: (1, 0)
      ``` 
 
 
