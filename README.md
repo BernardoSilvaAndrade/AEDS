@@ -55,6 +55,23 @@ O sistema é composto por quatro módulos interconectados:
      - Ao se mover, marca a posição anterior:
        - Se sair de `4` (água) → transforma em `0` e todas suas casas adjacentes se transformam em `1`  
 
+#### 2.3 Parâmetros de Configuração  
+- **ticsTotais**:  
+  Define o número máximo de iterações da simulação.  
+  - *Padrão*: `20`  
+  - *Como alterar*: Aumente para simulações mais longas (ex: `30`) ou reduza para testes rápidos. 
+
+- **ventoAtivo[]**:  
+  Vetor que controla as direções de propagação do fogo (ordem: Norte, Sul, Oeste, Leste).  
+  - *Padrão*: `[true, true, true, true]` (todas direções ativas)  
+  - *Personalização*:  
+    ```cpp
+    // Exemplo: vento só para Oeste (índice 2)
+    config.configurarVento(false, false, true, false);
+    ```  
+
+---
+
 #### 2.4 Fluxo de Dados  
 1. **Entrada**: Arquivo `input.dat` com formato:  
    - Dimensões da matriz + posição inicial do fogo  
