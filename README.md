@@ -70,17 +70,36 @@ O sistema é composto por quatro módulos interconectados:
     config.configurarVento(false, false, true, false);
     ```  
 
+
 ---
 
 #### 2.4 Fluxo de Dados  
-1. **Entrada**: Arquivo `input.dat` com formato:  
-   - Dimensões da matriz + posição inicial do fogo  
-   - Valores da matriz (0-1)  
-2. **Saída**: Arquivo `output.dat` contendo:  
-   - Evolução completa da matriz por iteração  
-   - Trajetória do animal e estado final  
+1. **Entrada (`input.dat`)**: 
+    - **Formato**:
+     ```
+     LINHAS COLUNAS FOGO_X FOGO_Y  
+     VALORES_DA_MATRIZ...  
+     ```
+   - **Observação**: O fogo inicial (`0,2`) é automaticamente inserido na posição `(FOGO_X, FOGO_Y)` durante a leitura.
+   - **Exemplo completo**:  
+     ```
+     5 5 0 2  
+     0 1 2 1 0  // Fogo já incluso na posição (0,2)  
+     1 3 1 1 1 
+     1 1 1 1 1  
+     1 1 1 1 1  
+     0 1 1 1 0  
+     ```  
 
----
+2. **Saída (`output.dat`)**:
+   - Registra a evolução completa, incluindo:  
+     - Estados intermediários da matriz  
+     - Posições do animal em cada tic
+     - Trajetória do animal no formato:
+     ```
+     Caminho: (0,0) → (1,0) → (2,0)
+     ```
+    - Estado final (sobrevivência ou motivo da morte).
 
 ## Estudos de Casos
 
