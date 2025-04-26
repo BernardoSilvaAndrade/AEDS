@@ -115,24 +115,29 @@ Neste exemplo, a simulação mostra um cenário onde o incêndio se espalha rapi
      Matriz inicial:    Iteraçao 01:     Iteracao 02:    Iteracao 03:    Itercao 04:    
      
      5 5 5 5            5 5 5 5          5 5 5 5         5 5 5 5         5 5 5 5        
-     0 1 1 1 1          0 1 1 1 1        0 1 1 1 1       0 1 1 1 1       0 1 1 1 2      
-     1 4 1 1 1          1 4 1 1 1        1 4 1 1 1       1 4 1 1 2       1 0 1 2 2      
+     0 4 1 1 1          0 4 1 1 1        0 4 1 1 1       1 0 1 1 1       1 0 1 1 2      
+     1 1 1 1 1          1 1 1 1 1        1 1 1 1 1       1 1 1 1 2       1 1 1 2 2      
      1 1 1 4 1          1 1 1 4 1        1 1 1 4 2       1 1 1 4 2       1 1 2 4 3     
      1 1 1 1 1          1 1 1 1 2        1 1 1 2 2       1 1 2 2 3       1 2 2 3 3      
      0 1 1 1 2          0 1 1 2 2        0 1 2 2 3       0 2 2 3 3       0 2 3 3 3      
-     Animal (0, 0)      Animal (0, 0)    Animal (0, 0)   Animal (1, 0)   Animal (1, 1)  
+     Animal (0, 0)      Animal (0, 0)    Animal (0, 0)   Animal (0, 1)   Animal (0, 1)  
      
-    Iteracao 05:    Itercao 06:     Iteracao 07:
+     Iteracao 05:       Itercao 06:     Iteracao 07:
 
-    5 5 5 5         5 5 5 5         5 5 5 5 
-    0 1 1 2 2       0 1 2 2 3       0 2 2 3 3
-    1 0 2 2 3       1 0 2 3 3       2 0 3 3 3
-    1 2 2 4 3       2 2 3 4 3       2 3 3 4 3
-    2 2 3 3 3       2 3 3 3 3       3 3 3 3 3
-    0 3 3 3 3       0 3 3 3 3       0 3 3 3 3
-    Animal (0, 1)   Animal (0, 0)   Animal (0, 0)
+     5 5 5 5            5 5 5 5         5 5 5 5 
+     0 1 1 2 2          0 1 2 2 3       0 2 2 3 3
+     1 1 2 2 3          1 1 2 3 3       2 2 3 3 3
+     1 2 2 4 3          2 2 3 4 3       2 3 3 4 3
+     2 2 3 3 3          2 3 3 3 3       3 3 3 3 3
+     0 3 3 3 3          0 3 3 3 3       0 3 3 3 3
+     Animal (0, 1)      Animal (1, 1)   Animal (1, 1)
 
-    Condição final: Animal foi atingido pelo fogo.
+      Dados da simulacao:
+    Casas de água visitadas: 1
+    Caminho percorrido pelo animal:
+    (0, 0) --> (0, 0) --> (0, 0) --> (1, 0) --> (1, 1) --> (1, 1) --> (1, 1)
+    Total de passos: 3
+    Condição final: Animal esta cercado pelo fogo.
 
      ``` 
 
