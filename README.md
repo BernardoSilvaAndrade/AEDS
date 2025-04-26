@@ -8,6 +8,13 @@
 
 Nesse projeto, consiste em uma simulação computacional que modela dois fenômenos interligados, onde temos uma propagação de um incêndio em uma floresta representada por uma matriz bidimensional, além de um comportamento de um animal tentando escapar do fogo enquanto ele se espalha pela matriz.
 
+O trabalho foi desenvolvido em C++ e aborda uma simulação que integra três desafios em um ambiente dinâmico. A simulação modela a propagação do incêndio florestal de forma realista, levando em conta vários fatores. A direção do vento, configurável para atuar em uma ou mais das quatro direções cardeais, impacta a direção do fogo. O tipo de terreno também influencia a propagação, sendo representado na matriz por diferentes valores: áreas de água (valor 4) que impedem o fogo de se espalhar, árvores saudáveis (valor 1) que queimam facilmente, árvores em chamas (valor 2) que ajudam a propagar o fogo, e árvores queimadas (valor 3) que não propagam mais o incêndio. Além disso, o tempo de queima das árvores é determinado pelo número de iterações que uma árvore permanece em chamas antes de se tornar cinza.
+
+Simultaneamente, é implementado um sistema que permite ao animal agir de forma autônoma, navegando por um ambiente dinâmico. O animal segue uma lógica de priorização clara: primeiramente, ele busca áreas seguras, como zonas com água, que representam a melhor opção de refúgio. Caso não encontre água, ele busca por áreas vazias ou árvores saudáveis (representadas por valores seguros na matriz). Se o animal ficar completamente cercado pelo fogo, ele morre. Além disso, caso o fogo atinja a casa em que o animal se encontra, ele também morre. A movimentação do animal ocorre de forma ortogonal, ou seja, ele pode se mover para as casas adjacentes acima, abaixo, à esquerda ou à direita, e sua prioridade de movimento é definida pela segurança da área ao redor.
+
+Por fim, o sistema gerencia diferentes estados ao longo do tempo, controlando a evolução da matriz e verificando continuamente as condições de término, como a sobrevivência do animal ou a propagação completa do fogo. Além disso, o sistema respeita um limite máximo de iterações para a simulação. Esses desafios - a propagação do fogo, a inteligência do animal para escapar e o controle dos estados da simulação - são os principais pontos do problema, envolvendo a modelagem do ambiente, a tomada de decisão do animal e a dinâmica do sistema.
+
+
 
 ## 📚 Metodologia
 
