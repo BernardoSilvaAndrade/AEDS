@@ -55,6 +55,16 @@ O sistema é composto por quatro módulos interconectados:
      - Ao se mover, marca a posição anterior:
        - Se sair de `4` (água) → transforma em `0` e todas suas casas adjacentes se transformam em `1`  
 
+#### 2.4 Fluxo de Dados  
+1. **Entrada**: Arquivo `input.dat` com formato:  
+   - Dimensões da matriz + posição inicial do fogo  
+   - Valores da matriz (0-1)  
+2. **Saída**: Arquivo `output.dat` contendo:  
+   - Evolução completa da matriz por iteração  
+   - Trajetória do animal e estado final  
+
+---
+
 ## Estudos de Casos
 
 ## 👨‍💻 Modo de Compilação e Execução
