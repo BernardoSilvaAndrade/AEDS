@@ -33,15 +33,23 @@ O sistema é composto por quatro módulos interconectados:
 ### 2. Detalhamento das Funcionalidades
 
 #### 2.1 Propagação do Incêndio
-**Mecanismo**:
-1. Para cada célula em chamas (`2`):
-   - Incrementa contador interno `ticsEmChamas`
-   - Se `ticsEmChamas >= ticsParaQueimar` (Config):
-     - Marca como queimada (`3`)
-     - Reseta contador
-   - Senão, propaga fogo para adjacentes:
-     - Verifica direções habilitadas pelo vento (Config)
-     - Só afeta células válidas (`1` = árvore saudável)
+- **Mecanismo**:  
+  1. Células em chamas (`2`) têm duração controlada por `ticsParaQueimar`  
+  2. A cada iteração, o fogo se expande para células adjacentes com árvores (`1`)  
+  3. Direção do incêndio influenciada por configurações de vento (Norte/Sul/Leste/Oeste), onde ele pode se propagar por todas as casas adjacentes, ou para so uma direção.   
+  4. Após 2 tics se tem uma combustão completa, a casa de fogo (`2`) se torna uma árvore queimada (`3`)  
+
+#### 2.2 Comportamento do Animal  
+- **Lógica de Movimento**:  
+  1. Sistema de prioridade para movimentação:
+    . Prioridade Máxima (Água - `4`): 
+    . Prioridade intermediária (Área vazia - `0`  - Árvore saudável `1`)
+    . Prioridade minima (Árvore queimada - `3` - Última casa visitada)
+  2. Atualiza a matriz ao mudar de posição
+
+- **Condições de Morte**:  
+  - Bloqueado por fogo em todas as direções  
+  - Presente em uma casa com fogo  
 
 ## Estudos de Casos
 
