@@ -41,16 +41,19 @@ O sistema é composto por quatro módulos interconectados:
 
 #### 2.2 Comportamento do Animal  
 - **Lógica de Movimento**:  
-  . Sistema de prioridade para movimentação:
+   1. **Sistema de Prioridades**:  
+     - **Prioridade Máxima**:  
+       - `4` = Água (célula segura para sobrevivência imediata)  
+     - **Prioridade Intermediária**:  
+       - `0` = Área vazia (espaço neutro sem perigo)  
+       - `1` = Árvore saudável (caminho possível, mas vulnerável)  
+     - **Prioridade Mínima**:  
+       - `3` = Árvore queimada (risco residual)  
+       - Última casa visitada (evita retrocessos imediatos)  
 
-    . Prioridade Máxima (Água - `4`): 
-    . Prioridade intermediária (Área vazia - `0`  - Árvore saudável `1`)
-    . Prioridade minima (Árvore queimada - `3` - Última casa visitada)
-  . Atualiza a matriz ao mudar de posição
-
-- **Condições de Morte**:  
-  - Bloqueado por fogo em todas as direções  
-  - Presente em uma casa com fogo  
+  2. **Atualização da Matriz**:  
+     - Ao se mover, marca a posição anterior:
+       - Se sair de `4` (água) → transforma em `0` e todas suas casas adjacentes se transformam em `1`  
 
 ## Estudos de Casos
 
