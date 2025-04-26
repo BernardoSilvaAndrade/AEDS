@@ -41,11 +41,12 @@ O sistema é composto por quatro módulos interconectados:
 
 #### 2.2 Comportamento do Animal  
 - **Lógica de Movimento**:  
-  1. Sistema de prioridade para movimentação:
+  . Sistema de prioridade para movimentação:
+
     . Prioridade Máxima (Água - `4`): 
     . Prioridade intermediária (Área vazia - `0`  - Árvore saudável `1`)
     . Prioridade minima (Árvore queimada - `3` - Última casa visitada)
-  2. Atualiza a matriz ao mudar de posição
+  . Atualiza a matriz ao mudar de posição
 
 - **Condições de Morte**:  
   - Bloqueado por fogo em todas as direções  
