@@ -1,7 +1,7 @@
 <h1 align="center">🌲Simulação de Propagação de Incêndio Florestal🔥</h1>
 
 <div align="center">
-  <img src="![Image](https://github.com/user-attachments/assets/82580ffd-dcb6-478a-a658-c812402de2c1)" alt="" width="400">
+  <img src="![Image](https://github.com/user-attachments/assets/82580ffd-dcb6-478a-a658-c812402de2c1)">
 </div>
 
 ## ☕ Introdução
