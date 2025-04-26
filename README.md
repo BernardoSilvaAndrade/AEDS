@@ -102,6 +102,24 @@ O sistema é composto por quatro módulos interconectados:
     - Estado final (sobrevivência ou motivo da morte).
 
 ## Estudos de Casos
+## Exemplos
+
+Aqui estão dois exemplos de simulação:
+
+### Exemplo 1: Animal Morre após Algumas Iterações
+
+Neste exemplo, a simulação mostra um cenário onde o incêndio se espalha rapidamente e o animal não consegue escapar a tempo. A matriz é atualizada a cada iteração, e o animal acaba morrendo.
+
+#### Matriz Inicial (Antes da Simulação): 
+     ```
+     5 5 5 5  
+     0 1 1 1 1  
+     1 4 1 0 1 
+     1 1 1 4 1  
+     1 1 1 1 1  
+     0 1 1 1 2  
+     ``` 
+
 
 ## 👨‍💻 Modo de Compilação e Execução
 ### Pré-requisitos
