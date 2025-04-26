@@ -4,6 +4,7 @@
 
 ## ☕ Introdução
 
+Este trabalho foi proposto pelo professor Michel Pires Silva, da matéria Algoritmos e Estrutura de Dados I, do Centro Federal de Educação Tecnológica de Minas Gerais (CEFET - MG), Campus V - Divinópolis.
 Nesse projeto, consiste em uma simulação computacional que modela dois fenômenos interligados, onde temos uma propagação de um incêndio em uma floresta representada por uma matriz bidimensional, além de um comportamento de um animal tentando escapar do fogo enquanto ele se espalha pela matriz.
 
 O trabalho foi desenvolvido em C++ e aborda uma simulação que integra três desafios em um ambiente dinâmico. A simulação modela a propagação do incêndio florestal de forma realista, levando em conta vários fatores. A direção do vento, configurável para atuar em uma ou mais das quatro direções cardeais e impacta diretamente a direção do fogo. O tipo de terreno também influencia a propagação, sendo representado na matriz por diferentes valores: áreas de água (valor 4) que impedem o fogo de se espalhar, árvores saudáveis (valor 1) que queimam facilmente, árvores em chamas (valor 2) que ajudam a propagar o fogo, e árvores queimadas (valor 3) que não propagam mais o incêndio. Além disso, o tempo de queima das árvores é determinado pelo número de iterações que uma árvore permanece em chamas antes de se tornar cinza.
