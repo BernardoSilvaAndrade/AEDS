@@ -149,6 +149,14 @@ O arquivo output.dat sera gerado com:
    
 ## Conclusão
 
+Este trabalho desenvolveu uma simulação que ilustra como o incêndio se propaga em uma floresta e como um animal tenta escapar desse perigo. O código, implementado em C++, cria um ambiente virtual simples, onde o fogo se espalha de acordo com regras pré-definidas, enquanto o animal toma decisões para buscar segurança.
+
+A simulação é dividida em duas partes principais: uma controla a propagação do fogo, influenciada pela direção do vento, e a outra gerencia o comportamento do animal, que busca constantemente os locais mais seguros. O interessante desse modelo é sua flexibilidade, permitindo ajustes fáceis em parâmetros como a direção do vento ou o tempo necessário para que uma árvore se queime completamente.
+
+O resultado é um programa capaz de simular diferentes cenários, demonstrando como o animal pode sobreviver ou ser pego pelo fogo. Embora o modelo ainda seja simples, existem várias formas de aprimorá-lo, como tornando o comportamento do animal mais inteligente ou adicionando mais detalhes ao cenário.
+
+No final, o projeto mostrou como a programação pode ser usada para criar modelos de processos da natureza. Ele também ajudou a entender como estudar sistemas simples pode nos ensinar sobre fenômenos mais complexos, abrindo espaço para explorar ideias mais avançadas no futuro.
+
 ## Referências
 Este projeto usa um Makefile fornecido pelo professor Michel Pires Silva.
 
