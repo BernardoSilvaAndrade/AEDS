@@ -43,13 +43,13 @@ O sistema é composto por quatro módulos interconectados:
 - **Lógica de Movimento**:  
    1. **Sistema de Prioridades**:  
      - **Prioridade Máxima**:  
-       - `4` = Água (célula segura para sobrevivência imediata)  
+       - `4` = Água 
      - **Prioridade Intermediária**:  
-       - `0` = Área vazia (espaço neutro sem perigo)  
-       - `1` = Árvore saudável (caminho possível, mas vulnerável)  
+       - `0` = Área vazia (não queima)  
+       - `1` = Árvore saudável 
      - **Prioridade Mínima**:  
-       - `3` = Árvore queimada (risco residual)  
-       - Última casa visitada (evita retrocessos imediatos)  
+       - `3` = Árvore queimada (não propaga mais fogo, árvore totalmente queimada)
+       - Última casa visitada 
 
   2. **Atualização da Matriz**:  
      - Ao se mover, marca a posição anterior:
