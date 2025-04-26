@@ -26,6 +26,7 @@ O sistema é composto por quatro módulos interconectados:
 - **Animal**: Controla a lógica de movimento e sobrevivência
 - **Config**: Armazena parâmetros globais
 - **Arquivo**: Manipula entrada/saída de dados
+- **Simulação**: Controla o loop principal e coordena as interações 
 
 ---
 
