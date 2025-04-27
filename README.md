@@ -173,7 +173,7 @@ Neste exemplo, o vento foi ativado, o que fez o fogo se espaplhar apenas para a 
     Total de passos: 2
     Condição final: Animal sobreviveu até o fim da simulação..
 
-     ```
+ ```
  OBS: Neste caso, os tics param por causa que todo o incendio parou de se espalhar
 
 
