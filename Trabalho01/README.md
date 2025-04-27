@@ -1,9 +1,5 @@
 <h1 align="center">🌲Simulação de Propagação de Incêndio Florestal🔥</h1>
 
-<div align="center">
-  <img src=https://github.com/user-attachments/assets/48e1d23b-d76c-43c6-be88-389714732fd5>
-</div>
-
 ## ☕ Introdução
 
 Este trabalho foi proposto pelo professor Michel Pires Silva, da matéria Algoritmos e Estruturas de Dados I, do CEFET - MG, Campus V - Divinópolis. O projeto consiste em uma simulação que modela a propagação de incêndio em uma floresta e o comportamento de um animal tentando escapar do fogo. A simulação é desenvolvida em C++ e visa integrar a dinâmica do fogo com a movimentação inteligente do animal em um ambiente de constante mudança.
