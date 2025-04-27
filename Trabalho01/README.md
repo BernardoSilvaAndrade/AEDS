@@ -136,7 +136,7 @@ Neste exemplo, a simulação mostra um cenário onde o incêndio se espalha rapi
      ``` 
 ### Exemplo 2: Vento Ativado e Animal Sobrevive
 
-Neste exemplo, o vento foi ativado, o que fez o fogo se espaplhar apenas para a direcao que o vento esta ativado. Neste caso, a ventania esta apenas para o oeste, todas as outras direcoes estao desativadas. No entanto, o animal conseguiu escapar a tempo e não morreu.
+Neste exemplo, o vento foi ativado, o que fez o fogo se espalhar apenas para a direção que o vento esta ativado. Neste caso, a ventania esta apenas para o oeste, todas as outras direções estao desativadas. No entanto, o animal conseguiu escapar a tempo e não morreu.
 
 #### Exemplo 02:
  ```
@@ -168,7 +168,7 @@ Neste exemplo, o vento foi ativado, o que fez o fogo se espaplhar apenas para a 
     Condição final: Animal sobreviveu até o fim da simulação..
 
  ```
- OBS: Neste caso, os tics param por causa que todo o incendio parou de se espalhar
+ OBS: Neste caso, os tics param por causa que todo o incêndio parou de se espalhar
 
 
 ## 👨‍💻 Modo de Compilação e Execução
