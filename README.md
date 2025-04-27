@@ -135,11 +135,46 @@ Neste exemplo, a simulação mostra um cenário onde o incêndio se espalha rapi
       Dados da simulacao:
     Casas de água visitadas: 1
     Caminho percorrido pelo animal:
-    (0, 0) --> (0, 0) --> (0, 0) --> (1, 0) --> (1, 1) --> (1, 1) --> (1, 1)
+    (0, 0) --> (0, 0) --> (0, 0) --> (0, 1) --> (0, 1) --> (0, 1) --> (1, 1)
     Total de passos: 3
     Condição final: Animal esta cercado pelo fogo.
 
      ``` 
+### Exemplo 2: Vento Ativado e Animal Sobrevive
+
+Neste exemplo, o vento foi ativado, o que fez o fogo se espaplhar apenas para a direcao que o vento esta ativado. Neste caso, a ventania esta apenas para o oeste, todas as outras direcoes estao desativadas. No entanto, o animal conseguiu escapar a tempo e não morreu.
+
+#### Exemplo 02:
+ ```
+     Matriz inicial:    Iteraçao 01:     Iteracao 02:    Iteracao 03:    Itercao 04:    
+     
+     5 5 5 5            5 5 5 5          5 5 5 5         5 5 5 5         5 5 5 5        
+     0 4 1 1 1          0 4 1 1 1        0 4 1 1 1       1 0 1 1 1       1 0 1 1 1      
+     1 1 1 1 1          1 1 1 1 1        1 1 1 1 1       1 1 1 1 1       1 1 1 1 1      
+     1 1 1 4 1          1 1 1 4 1        1 1 1 4 1       1 1 1 4 1       1 1 1 4 1     
+     1 1 1 1 1          1 1 1 1 1        1 1 1 1 1       1 1 1 1 1       1 1 1 1 1      
+     0 1 1 1 2          0 1 1 2 2        0 1 2 2 3       0 2 2 3 3       0 2 3 3 3      
+     Animal (0, 0)      Animal (0, 0)    Animal (0, 0)   Animal (0, 1)   Animal (0, 1)  
+     
+     Iteracao 05: 
+      
+     5 5 5 5           
+     0 1 1 1 1          
+     1 1 1 1 1          
+     1 1 1 4 1          
+     1 1 1 1 1      
+     0 3 3 3 3          
+     Animal (0, 1)      
+
+      Dados da simulacao:
+    Casas de água visitadas: 1
+    Caminho percorrido pelo animal:
+    (0, 0) --> (0, 0) --> (0, 0) --> (0, 1) --> (0, 1) --> (0, 1)
+    Total de passos: 2
+    Condição final: Animal sobreviveu até o fim da simulação..
+
+     ```
+ OBS: Neste caso, os tics param por causa que todo o incendio parou de se espalhar
 
 
 ## 👨‍💻 Modo de Compilação e Execução
