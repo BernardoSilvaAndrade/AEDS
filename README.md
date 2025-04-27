@@ -1,7 +1,7 @@
 <h1 align="center">🌲Simulação de Propagação de Incêndio Florestal🔥</h1>
 
 <div align="center">
-  <img src="![Image](https://github.com/user-attachments/assets/82580ffd-dcb6-478a-a658-c812402de2c1)">
+  <img src=https://github.com/user-attachments/assets/82580ffd-dcb6-478a-a658-c812402de2c1/>
 </div>
 
 ## ☕ Introdução
@@ -100,7 +100,7 @@ O sistema é composto por quatro módulos interconectados:
     - Estado final (sobrevivência ou motivo da morte).
 
 ## Estudos de Casos
-## Exemplos
+### Exemplos
 
 Aqui estão dois exemplos de simulação:
 
